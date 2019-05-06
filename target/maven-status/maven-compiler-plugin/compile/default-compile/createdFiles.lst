@@ -1,0 +1,10 @@
+com\automation\commonfunctions\BaseSetup.class
+com\automation\pageobjects\ViewPage.class
+com\automation\pageobjects\SearchResultPage.class
+com\automation\commonfunctions\GlobalDataSet.class
+com\automation\pageobjects\CreateBranchPage.class
+com\automation\pageobjects\CreateStaffPage.class
+com\automation\pageobjects\AuthenticationPage.class
+com\automation\pageobjects\HomePage.class
+com\automation\pageobjects\LandingPage.class
+com\automation\pageobjects\App.class

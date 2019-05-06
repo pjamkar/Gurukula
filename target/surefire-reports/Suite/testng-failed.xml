@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Suite]" parallel="none">
+  <test name="Test3(failed)" parallel="none">
+    <classes>
+      <class name="com.automation.ViewBranch">
+        <methods>
+          <include name="ViewBranch"/>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.ViewBranch -->
+    </classes>
+  </test> <!-- Test3(failed) -->
+</suite> <!-- Failed suite [Suite] -->
