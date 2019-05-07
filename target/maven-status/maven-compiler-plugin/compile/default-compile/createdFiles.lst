@@ -7,4 +7,3 @@ com\automation\pageobjects\CreateStaffPage.class
 com\automation\pageobjects\AuthenticationPage.class
 com\automation\pageobjects\HomePage.class
 com\automation\pageobjects\LandingPage.class
-com\automation\pageobjects\App.class

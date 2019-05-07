@@ -10,7 +10,7 @@ import com.automation.commonfunctions.BaseSetup;
 public class CreateStaffPage extends BaseSetup {
 
 	public WebDriver driver;
-	BaseSetup baseObj = new BaseSetup();
+	SearchResultPage searchresultObj = new SearchResultPage(driver);
 	
 	public CreateStaffPage(WebDriver driver) {
 		this.driver = driver;
@@ -25,19 +25,19 @@ public class CreateStaffPage extends BaseSetup {
 	
 	public WebElement getSearchBox()
 	{
-		baseObj.waitForElement(driver, searchBox, 10);
+		waitForElement(driver, searchBox, 10);
 		return driver.findElement(searchBox);
 	}
 	
 	public WebElement getSearchButton()
 	{
-		baseObj.waitForElement(driver, selectBranchSearchButton, 10);
+		waitForElement(driver, selectBranchSearchButton, 10);
 		return driver.findElement(selectBranchSearchButton);
 	}
 	
 	public WebElement getCreateStaff()
 	{
-		baseObj.waitForElement(driver, createStaff, 10);
+		waitForElement(driver, createStaff, 10);
 		return driver.findElement(createStaff) ;
 		
 	}
@@ -45,19 +45,36 @@ public class CreateStaffPage extends BaseSetup {
 	public WebElement getstaffName()
 	{
 		//driver.switchTo().activeElement();
-		baseObj.waitForElement(driver, staffName, 10);
+		waitForElement(driver, staffName, 10);
 		return driver.findElement(staffName);
 	}
 	public WebElement selectBranch()
 	{
-		baseObj.waitForElement(driver, staffBranch, 10);
+		waitForElement(driver, staffBranch, 10);
 		return driver.findElement(staffBranch);
 	}
 	
 	public WebElement getsaveButton()
 	{
-		baseObj.waitForElement(driver, saveButton, 10);
+		waitForElement(driver, saveButton, 10);
 		return driver.findElement(saveButton);
+	}
+	
+	public void addStaff(WebDriver driver)
+	{
+		String staffName = prop.getProperty("staffName");
+		getstaffName().sendKeys(staffName);
+		Select selBranch = new Select(selectBranch());
+		selBranch.selectByIndex(1);
+		getsaveButton().click();
+	}
+	
+	public WebElement searchStaff(WebDriver driver)
+	{
+		String searchTerm = prop.getProperty("staffName");
+		getSearchBox().sendKeys(searchTerm);
+		getSearchButton().click();
+		return searchresultObj.getTableRow();
 	}
 	
 }

@@ -1,7 +1,11 @@
 com\automation\SearchStaff.class
+com\automation\ViewStaff.class
 com\automation\AddStaff.class
+com\automation\EditBranch.class
 com\automation\ViewBranch.class
+com\automation\DeleteStaff.class
 com\automation\SearchBranch.class
-com\automation\AppTest.class
+com\automation\DeleteBranch.class
+com\automation\EditStaff.class
 com\automation\AddBranch.class
 com\automation\Login.class

@@ -1,0 +1,4 @@
+# Created at 2019-05-08T00:21:40.472
+Boot Manifest-JAR contains absolute paths in classpath 'F:\workspace2\Gurukula\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+

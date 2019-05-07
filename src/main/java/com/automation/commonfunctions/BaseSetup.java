@@ -16,6 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class BaseSetup {
 	public static WebDriver driver;
 	public static Properties prop = new Properties();
+	public static String errorMessage;
 	//Accept mvn command line argument for browser
 	//String browser = System.getProperty("browser");
 	

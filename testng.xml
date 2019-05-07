@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="none">
-   <test name="Test3">
-    <classes>
-      <class name="com.automation.ViewBranch"/>
-    </classes>
-  </test>
+	<test name="Test1">
+		<classes>
+			<class name="com.automation.AddBranch" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="Test2">
+		<classes>
+			<class name="com.automation.SearchBranch" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="Test3">
+		<classes>
+			<class name="com.automation.ViewBranch" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="Test4">
+		<classes>
+			<class name="com.automation.EditBranch" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="Test5">
+		<classes>
+			<class name="com.automation.DeleteBranch" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

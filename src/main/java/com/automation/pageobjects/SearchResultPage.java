@@ -6,11 +6,10 @@ import org.openqa.selenium.WebElement;
 
 import com.automation.commonfunctions.BaseSetup;
 
-public class SearchResultPage {
+public class SearchResultPage extends BaseSetup {
 
 	public WebDriver driver;
-	BaseSetup baseObj = new BaseSetup();
-	
+
 	public SearchResultPage(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -19,27 +18,30 @@ public class SearchResultPage {
 	By viewButton = By.xpath("//table/tbody/tr[1]/td[4]/button/span[contains(text(),'View')]");
 	By editButton = By.xpath("//table/tbody/tr[1]/td[4]/button/span[contains(text(),'Edit')]");
 	By deleteButton = By.xpath("//table/tbody/tr[1]/td[4]/button/span[contains(text(),'Delete')]");
-	
-	public WebElement getTableRow()
-	{
-		baseObj.waitForElement(driver, branchNameInTable, 10);
+	By confirmDeletion = By.xpath("//form[@name='deleteForm']//button[2]");
+
+	public WebElement getTableRow() {
+		waitForElement(driver, branchNameInTable, 10);
 		return driver.findElement(branchNameInTable);
 	}
-	public WebElement getviewButton()
-	{
-		baseObj.waitForElement(driver, viewButton, 10);
+
+	public WebElement getviewButton() {
+		waitForElement(driver, viewButton, 10);
 		return driver.findElement(viewButton);
 	}
-	
-	public WebElement getEditButton()
-	{
-		baseObj.waitForElement(driver, editButton, 10);
+
+	public WebElement getEditButton() {
+		waitForElement(driver, editButton, 10);
 		return driver.findElement(editButton);
 	}
-	
-	public WebElement getDeleteButton()
-	{
-		baseObj.waitForElement(driver, deleteButton, 10);
+
+	public WebElement getDeleteButton() {
+		waitForElement(driver, deleteButton, 10);
 		return driver.findElement(deleteButton);
+	}
+
+	public WebElement confirmDeletion() {
+		waitForElement(driver, confirmDeletion, 10);
+		return driver.findElement(confirmDeletion);
 	}
 }

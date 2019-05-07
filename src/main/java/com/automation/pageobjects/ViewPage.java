@@ -6,20 +6,18 @@ import org.openqa.selenium.WebElement;
 
 import com.automation.commonfunctions.BaseSetup;
 
-public class ViewPage {
+public class ViewPage extends BaseSetup {
 
 	public WebDriver driver;
-	BaseSetup baseObj = new BaseSetup();
-	
+
 	By viewName = By.xpath("//table/tbody/tr[1]/td[2]/input");
-	
+
 	public ViewPage(WebDriver driver) {
 		this.driver = driver;
 	}
-	
-	public WebElement getViewName()
-	{
-		baseObj.waitForElement(driver, viewName, 10);
+
+	public WebElement getViewName() {
+		waitForElement(driver, viewName, 10);
 		return driver.findElement(viewName);
 	}
 }
