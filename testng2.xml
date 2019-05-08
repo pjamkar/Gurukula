@@ -4,16 +4,9 @@
 	<listeners>
 		<listener class-name="com.automation.ListenersTest" />
 	</listeners>
-	<groups>
-		<run>
-		<include name="Branch" />
-		<include name="Staff" />
-		</run>
-	</groups>
-	<test name="Test1">
+	<test name="Logout">
 		<classes>
-			<class name="com.automation.AddStaff" />
-			<class name="com.automation.AddBranch" />
+			<class name="com.automation.Logout" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

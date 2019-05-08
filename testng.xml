@@ -51,4 +51,9 @@
 			<class name="com.automation.DeleteStaff" />
 		</classes>
 	</test>
+	<test name="Logout">
+		<classes>
+			<class name="com.automation.Logout" />
+		</classes>
+	</test>
 </suite> <!-- Suite -->

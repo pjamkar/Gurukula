@@ -4,15 +4,15 @@
   <listeners>
     <listener class-name="com.automation.ListenersTest"/>
   </listeners>
-  <test name="Test1(failed)" parallel="none">
+  <test name="Logout(failed)" parallel="none">
     <classes>
-      <class name="com.automation.AddBranch">
+      <class name="com.automation.Logout">
         <methods>
+          <include name="Signout"/>
           <include name="initializeBrowser"/>
           <include name="tearDown"/>
-          <include name="selectBranch"/>
         </methods>
-      </class> <!-- com.automation.AddBranch -->
+      </class> <!-- com.automation.Logout -->
     </classes>
-  </test> <!-- Test1(failed) -->
+  </test> <!-- Logout(failed) -->
 </suite> <!-- Failed suite [Suite] -->
