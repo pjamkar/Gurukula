@@ -1,75 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite verbose="0" name="Failed suite [Suite]" parallel="none">
-  <test name="Test(failed)" parallel="none">
+  <listeners>
+    <listener class-name="com.automation.ListenersTest"/>
+  </listeners>
+  <test name="Test1(failed)" parallel="none">
     <classes>
-      <class name="com.automation.DeleteStaff">
-        <methods>
-          <include name="tearDown"/>
-          <include name="initializeBrowser"/>
-        </methods>
-      </class> <!-- com.automation.DeleteStaff -->
-      <class name="com.automation.ViewBranch">
-        <methods>
-          <include name="tearDown"/>
-          <include name="initializeBrowser"/>
-        </methods>
-      </class> <!-- com.automation.ViewBranch -->
-      <class name="com.automation.SearchBranch">
-        <methods>
-          <include name="tearDown"/>
-          <include name="initializeBrowser"/>
-        </methods>
-      </class> <!-- com.automation.SearchBranch -->
       <class name="com.automation.AddBranch">
         <methods>
           <include name="initializeBrowser"/>
           <include name="tearDown"/>
+          <include name="selectBranch"/>
         </methods>
       </class> <!-- com.automation.AddBranch -->
-      <class name="com.automation.AddStaff">
-        <methods>
-          <include name="initializeBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.automation.AddStaff -->
-      <class name="com.automation.Login">
-        <methods>
-          <include name="initializeBrowser"/>
-          <include name="navigatetoLoginPage"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.automation.Login -->
-      <class name="com.automation.DeleteBranch">
-        <methods>
-          <include name="initializeBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.automation.DeleteBranch -->
-      <class name="com.automation.EditBranch">
-        <methods>
-          <include name="initializeBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.automation.EditBranch -->
-      <class name="com.automation.ViewStaff">
-        <methods>
-          <include name="tearDown"/>
-          <include name="initializeBrowser"/>
-        </methods>
-      </class> <!-- com.automation.ViewStaff -->
-      <class name="com.automation.EditStaff">
-        <methods>
-          <include name="tearDown"/>
-          <include name="initializeBrowser"/>
-        </methods>
-      </class> <!-- com.automation.EditStaff -->
-      <class name="com.automation.SearchStaff">
-        <methods>
-          <include name="initializeBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.automation.SearchStaff -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->

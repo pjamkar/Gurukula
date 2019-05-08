@@ -1,17 +1,24 @@
 package com.automation.commonfunctions;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.apache.commons.io.FileUtils;
+
 
 public class BaseSetup {
 	public static WebDriver driver;
@@ -28,6 +35,7 @@ public class BaseSetup {
 		if (browser.equalsIgnoreCase("chrome"))
 		{
 			System.setProperty("webdriver.chrome.driver", (System.getProperty("user.dir") + "/src/main/resources/chromedriver.exe"));
+			System.out.println((System.getProperty("user.dir") + "/src/main/resources/"));
 			driver = new ChromeDriver();
 		}
 		else if(browser.equalsIgnoreCase("FireFox"))
@@ -47,6 +55,7 @@ public class BaseSetup {
 	{
 		loadPropertyFile();
 		driver.get(prop.getProperty("InternalURL"));
+		driver.manage().window().maximize();
 		return driver;
 	}
 	
@@ -68,5 +77,12 @@ public class BaseSetup {
 			flag = false;
 		}
 		return flag;
+	}
+	
+	public void getScreenshot(String result) throws IOException
+	{
+		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		String fileSuffix = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+		FileUtils.copyFile(src, new File("F:\\workspace2\\Gurukula\\Screenshots\\method_" + result + "_fileSuffix" + ".png"));	
 	}
 }

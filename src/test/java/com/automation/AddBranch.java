@@ -20,7 +20,7 @@ public class AddBranch extends BaseSetup {
 
 	Login loginObj = new Login();
 
-	@Test 
+	@Test
 	public void selectBranch() throws IOException, InterruptedException {
 		try {
 			loginObj.navigatetoLoginPage();

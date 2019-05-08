@@ -1,29 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="none">
-	<test name="Test1">
+	<test name="Add Branch">
 		<classes>
 			<class name="com.automation.AddBranch" />
 		</classes>
-	</test> <!-- Test -->
-	<test name="Test2">
+	</test>
+	<test name="SearchBranch">
 		<classes>
 			<class name="com.automation.SearchBranch" />
 		</classes>
-	</test> <!-- Test -->
-	<test name="Test3">
-		<classes>
-			<class name="com.automation.ViewBranch" />
-		</classes>
-	</test> <!-- Test -->
-	<test name="Test4">
+	</test>
+	<test name="EditBranch">
 		<classes>
 			<class name="com.automation.EditBranch" />
 		</classes>
-	</test> <!-- Test -->
-	<test name="Test5">
+	</test>
+	<test name="ViewBranch">
+		<classes>
+			<class name="com.automation.ViewBranch" />
+		</classes>
+	</test>
+	<test name="DeleteBranch">
 		<classes>
 			<class name="com.automation.DeleteBranch" />
 		</classes>
-	</test> <!-- Test -->
+	</test>
+	<test name="Add Staff">
+		<classes>
+			<class name="com.automation.AddStaff" />
+		</classes>
+	</test>
+	<test name="SearchStaff">
+		<classes>
+			<class name="com.automation.SearchStaff" />
+		</classes>
+	</test>
+	<test name="ViewStaff">
+		<classes>
+			<class name="com.automation.ViewStaff" />
+		</classes>
+	</test>
+	<test name="EditStaff">
+		<classes>
+			<class name="com.automation.EditStaff" />
+		</classes>
+	</test>
+	<test name="DeleteStaff">
+		<classes>
+			<class name="com.automation.DeleteStaff" />
+		</classes>
+	</test>
 </suite> <!-- Suite -->
