@@ -26,23 +26,22 @@ public class ViewBranch extends BaseSetup {
 
 	@Test
 	public void ViewBranchDetails() throws IOException, InterruptedException {
-		try {
-			loginObj.navigatetoLoginPage();
-			HomePage homePageObj = new HomePage(driver);
-			homePageObj.getEntities().click();
-			homePageObj.getBranch().click();
-			CreateBranchPage searchBranch = new CreateBranchPage(driver);
-			WebElement branchName = searchBranch.searchBranch(driver);
-			((SearchResultPage) branchName).getviewButton().click();
-			ViewPage viewResult = new ViewPage(driver);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+
+		loginObj.navigatetoLoginPage();
+		HomePage homePageObj = new HomePage(driver);
+		homePageObj.getEntities().click();
+		homePageObj.getBranch().click();
+		CreateBranchPage searchBranch = new CreateBranchPage(driver);
+		searchBranch.getSearchBox().sendKeys(prop.getProperty("branchName"));
+		searchBranch.getSearchButton().click();
+		SearchResultPage result = new SearchResultPage(driver);
+		result.getviewButton().click();
+		ViewPage viewResult = new ViewPage(driver);
 	}
 
 	@AfterTest
 	public void tearDown() {
 		driver.close();
-		//driver = null;
+		driver = null;
 	}
 }

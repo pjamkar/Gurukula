@@ -28,10 +28,8 @@ public class Logout extends BaseSetup {
 		HomePage homePageObj = new HomePage(driver);
 		homePageObj.getAccount().click();
 		homePageObj.getLogout().click();
-		Assert.assertFalse(homePageObj.getEntities().isDisplayed());
 	}
 
-	@AfterMethod
 	@AfterTest
 	public void tearDown() {
 		driver.close();

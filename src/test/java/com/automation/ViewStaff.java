@@ -27,32 +27,21 @@ public class ViewStaff extends BaseSetup {
 
 	@Test
 	public void ViewStaffDetails() throws IOException, InterruptedException {
-		try {
 			loginObj.navigatetoLoginPage();
 			HomePage homePageObj = new HomePage(driver);
 			homePageObj.getEntities().click();
 			homePageObj.getStaff().click();
 			CreateStaffPage searchStaff = new CreateStaffPage(driver);
-			WebElement staffName = searchStaff.searchStaff(driver);
-			((SearchResultPage) staffName).getviewButton().click();
+			searchStaff.getSearchBox().sendKeys(prop.getProperty("staffName"));
+			searchStaff.getSearchButton().click();
+			SearchResultPage result = new SearchResultPage(driver);
+			result.getviewButton().click();
 			ViewPage viewResult = new ViewPage(driver);
-			// viewResult.getViewName().getText();
-			/*
-			 * String searchTerm = prop.getProperty("staffName");
-			 * searchStaff.getSearchBox().sendKeys(searchTerm);
-			 * searchStaff.getSearchButton().click(); SearchResultPage
-			 * searchresultObj = new SearchResultPage(driver);
-			 * searchresultObj.getTableRow().getText();
-			 * searchresultObj.getviewButton().click();
-			 */
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 	}
 
 	@AfterTest
 	public void tearDown() {
 		driver.close();
-		//driver = null;
+		driver = null;
 	}
 }

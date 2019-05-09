@@ -22,23 +22,20 @@ public class AddBranch extends BaseSetup {
 
 	@Test
 	public void selectBranch() throws IOException, InterruptedException {
-		try {
-			loginObj.navigatetoLoginPage();
-			HomePage homePageObj = new HomePage(driver);
-			homePageObj.getEntities().click();
-			homePageObj.getBranch().click();
-			CreateBranchPage newBranch = new CreateBranchPage(driver);
-			newBranch.getCreateBranch().click();
-			Thread.sleep(1000);
-			newBranch.addBranch(driver);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+
+		loginObj.navigatetoLoginPage();
+		HomePage homePageObj = new HomePage(driver);
+		homePageObj.getEntities().click();
+		homePageObj.getBranch().click();
+		CreateBranchPage newBranch = new CreateBranchPage(driver);
+		newBranch.getCreateBranch().click();
+		Thread.sleep(1000);
+		newBranch.addBranch(driver);
 	}
 
 	@AfterTest
 	public void tearDown() {
 		driver.close();
-		//driver = null;
+		driver = null;
 	}
 }

@@ -35,7 +35,6 @@ public class BaseSetup {
 		if (browser.equalsIgnoreCase("chrome"))
 		{
 			System.setProperty("webdriver.chrome.driver", (System.getProperty("user.dir") + "/src/main/resources/chromedriver.exe"));
-			System.out.println((System.getProperty("user.dir") + "/src/main/resources/"));
 			driver = new ChromeDriver();
 		}
 		else if(browser.equalsIgnoreCase("FireFox"))

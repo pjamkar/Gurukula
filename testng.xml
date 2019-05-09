@@ -6,6 +6,11 @@
 			<class name="com.automation.AddBranch" />
 		</classes>
 	</test>
+	<test name="Add Staff">
+		<classes>
+			<class name="com.automation.AddStaff" />
+		</classes>
+	</test>
 	<test name="SearchBranch">
 		<classes>
 			<class name="com.automation.SearchBranch" />
@@ -19,16 +24,6 @@
 	<test name="ViewBranch">
 		<classes>
 			<class name="com.automation.ViewBranch" />
-		</classes>
-	</test>
-	<test name="DeleteBranch">
-		<classes>
-			<class name="com.automation.DeleteBranch" />
-		</classes>
-	</test>
-	<test name="Add Staff">
-		<classes>
-			<class name="com.automation.AddStaff" />
 		</classes>
 	</test>
 	<test name="SearchStaff">
@@ -49,6 +44,11 @@
 	<test name="DeleteStaff">
 		<classes>
 			<class name="com.automation.DeleteStaff" />
+		</classes>
+	</test>
+	<test name="DeleteBranch">
+		<classes>
+			<class name="com.automation.DeleteBranch" />
 		</classes>
 	</test>
 	<test name="Logout">

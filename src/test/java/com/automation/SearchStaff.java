@@ -27,23 +27,19 @@ public class SearchStaff extends BaseSetup {
 
 	@Test
 	public void searchingStaff() throws IOException, InterruptedException {
-		try {
-			loginObj.navigatetoLoginPage();
-			HomePage homePageObj = new HomePage(driver);
-			homePageObj.getEntities().click();
-			homePageObj.getStaff().click();
-			CreateStaffPage searchStaff = new CreateStaffPage(driver);
-			WebElement foundStaffName = searchStaff.searchStaff(driver);
-			AssertJUnit.assertEquals(foundStaffName.getText(), prop.getProperty("staffName"));	
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
+
+		loginObj.navigatetoLoginPage();
+		HomePage homePageObj = new HomePage(driver);
+		homePageObj.getEntities().click();
+		homePageObj.getStaff().click();
+		CreateStaffPage searchStaff = new CreateStaffPage(driver);
+		searchStaff.getSearchBox().sendKeys(prop.getProperty("staffName"));
+		searchStaff.getSearchButton().click();
 	}
 
 	@AfterTest
 	public void tearDown() {
 		driver.close();
-		//driver = null;
+		driver = null;
 	}
 }

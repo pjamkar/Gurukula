@@ -11,7 +11,7 @@ public class CreateStaffPage extends BaseSetup {
 
 	public WebDriver driver;
 	SearchResultPage searchresultObj = new SearchResultPage(driver);
-	
+
 	public CreateStaffPage(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -22,59 +22,45 @@ public class CreateStaffPage extends BaseSetup {
 	By saveButton = By.xpath("//span[contains(text(),'Save')]");
 	By searchBox = By.xpath("//form[@name='searchForm']//input");
 	By selectBranchSearchButton = By.xpath("//form[@name='searchForm']//button");
-	
-	public WebElement getSearchBox()
-	{
+
+	public WebElement getSearchBox() {
 		waitForElement(driver, searchBox, 10);
 		return driver.findElement(searchBox);
 	}
-	
-	public WebElement getSearchButton()
-	{
+
+	public WebElement getSearchButton() {
 		waitForElement(driver, selectBranchSearchButton, 10);
 		return driver.findElement(selectBranchSearchButton);
 	}
-	
-	public WebElement getCreateStaff()
-	{
+
+	public WebElement getCreateStaff() {
 		waitForElement(driver, createStaff, 10);
-		return driver.findElement(createStaff) ;
-		
+		return driver.findElement(createStaff);
+
 	}
-	
-	public WebElement getstaffName()
-	{
-		//driver.switchTo().activeElement();
+
+	public WebElement getstaffName() {
+		// driver.switchTo().activeElement();
 		waitForElement(driver, staffName, 10);
 		return driver.findElement(staffName);
 	}
-	public WebElement selectBranch()
-	{
+
+	public WebElement selectBranch() {
 		waitForElement(driver, staffBranch, 10);
 		return driver.findElement(staffBranch);
 	}
-	
-	public WebElement getsaveButton()
-	{
+
+	public WebElement getsaveButton() {
 		waitForElement(driver, saveButton, 10);
 		return driver.findElement(saveButton);
 	}
-	
-	public void addStaff(WebDriver driver)
-	{
+
+	public void addStaff(WebDriver driver) throws InterruptedException {
+		Thread.sleep(1000);
 		String staffName = prop.getProperty("staffName");
 		getstaffName().sendKeys(staffName);
 		Select selBranch = new Select(selectBranch());
-		selBranch.selectByIndex(1);
+		selBranch.selectByVisibleText(prop.getProperty("branchName"));
 		getsaveButton().click();
 	}
-	
-	public WebElement searchStaff(WebDriver driver)
-	{
-		String searchTerm = prop.getProperty("staffName");
-		getSearchBox().sendKeys(searchTerm);
-		getSearchButton().click();
-		return searchresultObj.getTableRow();
-	}
-	
 }

@@ -1,18 +1,359 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite verbose="0" name="Failed suite [Suite]" parallel="none">
-  <listeners>
-    <listener class-name="com.automation.ListenersTest"/>
-  </listeners>
-  <test name="Logout(failed)" parallel="none">
+  <test name="ViewBranch(failed)" parallel="none">
     <classes>
       <class name="com.automation.Logout">
         <methods>
-          <include name="Signout"/>
           <include name="initializeBrowser"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.automation.Logout -->
+      <class name="com.automation.ViewBranch">
+        <methods>
+          <include name="tearDown"/>
+          <include name="ViewBranchDetails"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.ViewBranch -->
+      <class name="com.automation.DeleteBranch">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.DeleteBranch -->
+      <class name="com.automation.ViewStaff">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.ViewStaff -->
+      <class name="com.automation.EditBranch">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.EditBranch -->
+      <class name="com.automation.EditStaff">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.EditStaff -->
+      <class name="com.automation.AddStaff">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.AddStaff -->
+      <class name="com.automation.SearchBranch">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.SearchBranch -->
+      <class name="com.automation.SearchStaff">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.SearchStaff -->
+      <class name="com.automation.AddBranch">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.AddBranch -->
+      <class name="com.automation.DeleteStaff">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.DeleteStaff -->
     </classes>
-  </test> <!-- Logout(failed) -->
+  </test> <!-- ViewBranch(failed) -->
+  <test name="ViewStaff(failed)" parallel="none">
+    <classes>
+      <class name="com.automation.Logout">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.Logout -->
+      <class name="com.automation.ViewBranch">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.ViewBranch -->
+      <class name="com.automation.DeleteBranch">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.DeleteBranch -->
+      <class name="com.automation.ViewStaff">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+          <include name="ViewStaffDetails"/>
+        </methods>
+      </class> <!-- com.automation.ViewStaff -->
+      <class name="com.automation.EditBranch">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.EditBranch -->
+      <class name="com.automation.EditStaff">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.EditStaff -->
+      <class name="com.automation.AddStaff">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.AddStaff -->
+      <class name="com.automation.SearchBranch">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.SearchBranch -->
+      <class name="com.automation.SearchStaff">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.SearchStaff -->
+      <class name="com.automation.AddBranch">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.AddBranch -->
+      <class name="com.automation.DeleteStaff">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.DeleteStaff -->
+    </classes>
+  </test> <!-- ViewStaff(failed) -->
+  <test name="EditStaff(failed)" parallel="none">
+    <classes>
+      <class name="com.automation.Logout">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.Logout -->
+      <class name="com.automation.ViewBranch">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.ViewBranch -->
+      <class name="com.automation.DeleteBranch">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.DeleteBranch -->
+      <class name="com.automation.ViewStaff">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.ViewStaff -->
+      <class name="com.automation.EditStaff">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+          <include name="EditStaffDetails"/>
+        </methods>
+      </class> <!-- com.automation.EditStaff -->
+      <class name="com.automation.EditBranch">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.EditBranch -->
+      <class name="com.automation.AddStaff">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.AddStaff -->
+      <class name="com.automation.SearchBranch">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.SearchBranch -->
+      <class name="com.automation.SearchStaff">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.SearchStaff -->
+      <class name="com.automation.AddBranch">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.AddBranch -->
+      <class name="com.automation.DeleteStaff">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.DeleteStaff -->
+    </classes>
+  </test> <!-- EditStaff(failed) -->
+  <test name="DeleteStaff(failed)" parallel="none">
+    <classes>
+      <class name="com.automation.Logout">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.Logout -->
+      <class name="com.automation.ViewBranch">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.ViewBranch -->
+      <class name="com.automation.DeleteBranch">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.DeleteBranch -->
+      <class name="com.automation.ViewStaff">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.ViewStaff -->
+      <class name="com.automation.EditBranch">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.EditBranch -->
+      <class name="com.automation.EditStaff">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.EditStaff -->
+      <class name="com.automation.AddStaff">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.AddStaff -->
+      <class name="com.automation.SearchBranch">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.SearchBranch -->
+      <class name="com.automation.SearchStaff">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.SearchStaff -->
+      <class name="com.automation.AddBranch">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.AddBranch -->
+      <class name="com.automation.DeleteStaff">
+        <methods>
+          <include name="tearDown"/>
+          <include name="StaffDelete"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.DeleteStaff -->
+    </classes>
+  </test> <!-- DeleteStaff(failed) -->
+  <test name="DeleteBranch(failed)" parallel="none">
+    <classes>
+      <class name="com.automation.Logout">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.Logout -->
+      <class name="com.automation.ViewBranch">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.ViewBranch -->
+      <class name="com.automation.DeleteBranch">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+          <include name="BranchDelete"/>
+        </methods>
+      </class> <!-- com.automation.DeleteBranch -->
+      <class name="com.automation.ViewStaff">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.ViewStaff -->
+      <class name="com.automation.EditBranch">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.EditBranch -->
+      <class name="com.automation.EditStaff">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.EditStaff -->
+      <class name="com.automation.AddStaff">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.AddStaff -->
+      <class name="com.automation.SearchBranch">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.SearchBranch -->
+      <class name="com.automation.SearchStaff">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.SearchStaff -->
+      <class name="com.automation.AddBranch">
+        <methods>
+          <include name="initializeBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.AddBranch -->
+      <class name="com.automation.DeleteStaff">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+        </methods>
+      </class> <!-- com.automation.DeleteStaff -->
+    </classes>
+  </test> <!-- DeleteBranch(failed) -->
 </suite> <!-- Failed suite [Suite] -->

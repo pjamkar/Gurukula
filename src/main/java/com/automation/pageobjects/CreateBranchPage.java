@@ -10,7 +10,6 @@ import com.automation.commonfunctions.BaseSetup;
 public class CreateBranchPage extends BaseSetup {
 
 	public WebDriver driver;
-	SearchResultPage searchresultObj = new SearchResultPage(driver);
 
 	public CreateBranchPage(WebDriver driver) {
 		this.driver = driver;
@@ -54,18 +53,12 @@ public class CreateBranchPage extends BaseSetup {
 		return driver.findElement(saveButton);
 	}
 
-	public void addBranch(WebDriver driver) {
+	public void addBranch(WebDriver driver) throws InterruptedException {
+		Thread.sleep(1000);
 		String branchName = prop.getProperty("branchName");
 		String branchCode = prop.getProperty("branchCode");
 		getbranchName().sendKeys(branchName);
 		getbranchCode().sendKeys(branchCode);
 		getsaveButton().click();
-	}
-
-	public WebElement searchBranch(WebDriver driver) {
-		String searchTerm = prop.getProperty("branchName");
-		getSearchBox().sendKeys(searchTerm);
-		getSearchButton().click();
-		return searchresultObj.getTableRow();
 	}
 }

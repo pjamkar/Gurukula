@@ -25,24 +25,21 @@ public class EditStaff extends BaseSetup {
 
 	@Test
 	public void EditStaffDetails() throws IOException, InterruptedException {
-		try {
-			loginObj.navigatetoLoginPage();
-			HomePage homePageObj = new HomePage(driver);
-			homePageObj.getEntities().click();
-			homePageObj.getStaff().click();
-			CreateStaffPage searchStaff = new CreateStaffPage(driver);
-			WebElement staffName =  searchStaff.searchStaff(driver);
-			((SearchResultPage) staffName).getEditButton().click();
-			searchStaff.addStaff(driver);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
+		loginObj.navigatetoLoginPage();
+		HomePage homePageObj = new HomePage(driver);
+		homePageObj.getEntities().click();
+		homePageObj.getStaff().click();
+		CreateStaffPage searchStaff = new CreateStaffPage(driver);
+		searchStaff.getSearchBox().sendKeys(prop.getProperty("staffName"));
+		searchStaff.getSearchButton().click();
+		SearchResultPage result = new SearchResultPage(driver);
+		result.getviewButton().click();
+		searchStaff.addStaff(driver);
 	}
 
 	@AfterTest
 	public void tearDown() {
 		driver.close();
-		//driver = null;
+		driver = null;
 	}
 }

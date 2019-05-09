@@ -22,23 +22,20 @@ public class AddStaff extends BaseSetup {
 	// This method is to add a new staff
 	@Test
 	public void selectStaff() throws IOException, InterruptedException {
-		try {
-			loginObj.navigatetoLoginPage();
-			HomePage homePageObj = new HomePage(driver);
-			homePageObj.getEntities().click();
-			homePageObj.getStaff().click();
-			CreateStaffPage newStaff = new CreateStaffPage(driver);
-			newStaff.getCreateStaff().click();
-			Thread.sleep(1000);
-			newStaff.addStaff(driver);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+
+		loginObj.navigatetoLoginPage();
+		HomePage homePageObj = new HomePage(driver);
+		homePageObj.getEntities().click();
+		homePageObj.getStaff().click();
+		CreateStaffPage newStaff = new CreateStaffPage(driver);
+		newStaff.getCreateStaff().click();
+		Thread.sleep(1000);
+		newStaff.addStaff(driver);
 	}
 
 	@AfterTest
 	public void tearDown() {
 		driver.close();
-		//driver = null;
+		driver = null;
 	}
 }

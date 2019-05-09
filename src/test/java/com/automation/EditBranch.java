@@ -25,24 +25,22 @@ public class EditBranch extends BaseSetup {
 
 	@Test
 	public void EditBranchDetails () throws IOException, InterruptedException {
-		try {
 			loginObj.navigatetoLoginPage();
 			HomePage homePageObj = new HomePage(driver);
 			homePageObj.getEntities().click();
 			homePageObj.getBranch().click();
 			CreateBranchPage searchBranch  = new CreateBranchPage(driver);
-			WebElement branchName =  searchBranch.searchBranch(driver);
-			((SearchResultPage) branchName).getEditButton().click();
+			String searchTerm = prop.getProperty("branchName");
+			searchBranch.getSearchBox().sendKeys(searchTerm);
+			searchBranch.getSearchButton().click();
+			SearchResultPage result = new SearchResultPage(driver);
+			result.getEditButton().click();
 			searchBranch.addBranch(driver);
-			Thread.sleep(1000);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 	}
 
 	@AfterTest
 	public void tearDown() {
 		driver.close();
-		//driver = null;
+		driver = null;
 	}
 }

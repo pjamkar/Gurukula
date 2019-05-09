@@ -21,7 +21,7 @@ public class SearchResultPage extends BaseSetup {
 	By confirmDeletion = By.xpath("//form[@name='deleteForm']//button[2]");
 
 	public WebElement getTableRow() {
-		waitForElement(driver, branchNameInTable, 10);
+		waitForElement(driver, branchNameInTable, 20);
 		return driver.findElement(branchNameInTable);
 	}
 
